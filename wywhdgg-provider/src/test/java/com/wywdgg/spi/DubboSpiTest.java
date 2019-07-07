@@ -1,6 +1,6 @@
 package com.wywdgg.spi;
 
-import com.wywhdgg.provider.spi.Robot;
+import com.wywhdgg.provider.service.Robot;
 import org.apache.dubbo.common.extension.ExtensionLoader;
 import org.junit.Test;
 

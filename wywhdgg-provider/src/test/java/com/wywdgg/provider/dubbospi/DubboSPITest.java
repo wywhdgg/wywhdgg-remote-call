@@ -7,11 +7,11 @@ import com.wywhdgg.provider.service.Robot;
 /**
  * @author: dongzhb
  * @date: 2019/6/25
- * @Description:
+ * @Description:  Dubbo  spi
  */
 public class DubboSPITest {
 
-//    @Test
+    @Test
     public void sayHello() throws Exception {
         ExtensionLoader<Robot> extensionLoader =
             ExtensionLoader.getExtensionLoader(Robot.class);

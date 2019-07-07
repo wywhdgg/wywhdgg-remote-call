@@ -1,0 +1,19 @@
+#扩展spi机制
+获取myRegistry
+16:51:39,250  INFO MyRegistry:261 -  [DUBBO]
+ Register: dubbo://192.168.56.1:28080/com.study.dubbo.DemoService?anyhost=true&application=demo-service-provider&dubbo=2.6.1&
+ generic=false&interface=com.study.dubbo.DemoService&methods=test,say&pid=20296&serialization=fastjson&side=provider&timestamp=1556006021065,
+ dubbo version: 2.7.1, current host: 192.168.0.103
+注册了：dubbo://192.168.56.1:28080/com.study.dubbo.DemoService?anyhost=true&application=demo-service-provider&dubbo=2.6.1&
+generic=false&interface=com.study.dubbo.DemoService&methods=test,say&pid=20296&serialization=fastjson&side=provider&timestamp=1556006021065
+16:51:39,251  INFO MyRegistry:286 -  [DUBBO]
+Subscribe: dubbo://192.168.56.1:28080/com.study.dubbo.DemoService?anyhost=true&application=demo-service-provider&dubbo=2.6.1&generic=false&
+interface=com.study.dubbo.DemoService&methods=test,say&pid=20296&serialization=fastjson&side=provider&timestamp=1556006021065, dubbo version: 2.7.1, current host: 192.168.0.103
+订阅：dubbo://192.168.56.1:28080/com.study.dubbo.DemoService?anyhost=true&application=demo-service-provider&dubbo=2.6.1&generic=false&
+interface=com.study.dubbo.DemoService&methods=test,say&pid=20296&serialization=fastjson&side=provider&timestamp=1556006021065
+16:51:39,253  INFO MyRegistry:272 -  [DUBBO]
+Unregister: dubbo://192.168.56.1:28080/com.study.dubbo.DemoService?anyhost=true&application=demo-service-provider&dubbo=2.6.1&
+generic=false&interface=com.study.dubbo.DemoService&methods=test,say&pid=20296&serialization=fastjson&side=provider&timestamp=1556006021065,
+dubbo version: 2.7.1, current host: 192.168.0.103
+取消注册：dubbo://192.168.56.1:28080/com.study.dubbo.DemoService?anyhost=true&application=demo-service-provider&dubbo=2.6.1&
+generic=false&interface=com.study.dubbo.DemoService&methods=test,say&pid=20296&serialization=fastjson&side=provider&timestamp=1556006021065

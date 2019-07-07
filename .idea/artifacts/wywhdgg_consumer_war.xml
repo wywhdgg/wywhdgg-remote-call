@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="wywhdgg-consumer:war">
+    <output-path>$PROJECT_DIR$/wywhdgg-consumer/target</output-path>
+    <root id="archive" name="wywhdgg-consumer-1.0.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="wywhdgg-consumer:war exploded" />
+    </root>
+  </artifact>
+</component>

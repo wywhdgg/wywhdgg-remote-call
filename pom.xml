@@ -8,6 +8,13 @@
   <packaging>pom</packaging>
   <version>1.0.0-SNAPSHOT</version>
   <modules>
+    <module>wywhdgg-api</module>
+    <module>wywhdgg-common</module>
+    <module>wywhdgg-client</module>
+    <module>wywhdgg-service</module>
+    <module>wywhdgg-web</module>
+    <module>wywhdgg-consumer</module>
+    <module>wywhdgg-provider</module>
   </modules>
 
   <properties>

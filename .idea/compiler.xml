@@ -1,8 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="wywhdgg-api" />
+        <module name="wywhdgg-client" />
+        <module name="wywhdgg-common" />
+        <module name="wywhdgg-consumer" />
+        <module name="wywhdgg-provider" />
+        <module name="wywhdgg-service" />
+        <module name="wywhdgg-web" />
+      </profile>
+    </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="wywhdgg-api" target="1.8" />
+      <module name="wywhdgg-client" target="1.8" />
+      <module name="wywhdgg-common" target="1.8" />
+      <module name="wywhdgg-consumer" target="1.8" />
+      <module name="wywhdgg-provider" target="1.8" />
       <module name="wywhdgg-remote-call" target="1.8" />
+      <module name="wywhdgg-service" target="1.8" />
+      <module name="wywhdgg-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,0 +1,8 @@
+17:47:55,687 DEBUG DecodeHandler:59 -  [DUBBO] Decode decodeable message org.apache.dubbo.rpc.protocol.dubbo.DecodeableRpcInvocation, dubbo version: 2.7.1, current host: 192.168.0.103
+17:47:55,687  INFO OrderServiceImpl:19 - 创建订单，收到参数请求=OrderModel{orderType=1, userId='12306', orderName='充值订单', orderNo=''}
+17:47:56,673 DEBUG ClientCnxn:743 - Got ping response for sessionid: 0x16bcb83eaf00015 after 0ms
+17:47:57,689  INFO OrderServiceImpl:29 - 处理结果=OrderModel{orderType=1, userId='12306', orderName='充值订单', orderNo='2'}
+17:47:57,703 DEBUG DecodeHandler:59 -  [DUBBO] Decode decodeable message org.apache.dubbo.rpc.protocol.dubbo.DecodeableRpcInvocation, dubbo version: 2.7.1, current host: 192.168.0.103
+17:47:57,703 DEBUG OrderServiceImpl:36 - 查询订单，收到参数：
+17:47:58,704 DEBUG OrderServiceImpl:47 - 查询订单，返回结果：OrderModel{orderType=2, userId='12307', orderName='交易订单', orderNo=''}
+17:48:10,008 DEBUG ClientCnxn:743 - Got ping response for sessionid: 0x16bcb83eaf00015 after 1ms

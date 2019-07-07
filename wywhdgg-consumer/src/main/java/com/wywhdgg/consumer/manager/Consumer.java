@@ -25,8 +25,8 @@ public class Consumer {
 		String orderNo = orderService.createOrder(order); // 执行远程方法
 		System.out.println("获取订单号："+orderNo); // 显示调用结果
 		System.out.println("----------------------");
-//		OrderModel orderModel = orderService.getOrder("");
-//		System.out.println("order detail"+orderModel);
+		OrderModel orderModel = orderService.getOrder("");
+		System.out.println("order detail"+orderModel);
 		System.out.println(orderService);
 		System.in.read();
 		context.close();

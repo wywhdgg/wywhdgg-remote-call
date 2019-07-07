@@ -1,5 +1,5 @@
-2019-07-07 17:16:29  [ dubbo-client-idleCheck-thread-1:67165 ] - [ ERROR ]   [DUBBO] Fail to connect to HeaderExchangeClient [channel=org.apache.dubbo.remoting.transport.netty4.NettyClient [192.168.0.103:0 -> /192.168.0.101:20880]], dubbo version: 2.7.1, current host: 192.168.0.103
-org.apache.dubbo.remoting.RemotingException: client(url: dubbo://192.168.0.101:20880/com.wywhdgg.api.serivce.OrderService?actives=10&anyhost=true&application=wywhdgg-consumer&bean.name=com.wywhdgg.api.serivce.OrderService&check=false&codec=dubbo&createOrder.timeout=6000&default.deprecated=false&default.dynamic=false&default.lazy=false&default.register=true&default.sticky=false&deprecated=false&dubbo=2.0.2&dynamic=false&generic=false&heartbeat=60000&interface=com.wywhdgg.api.serivce.OrderService&lazy=false&methods=createOrder,getOrder&mock=com.wywhdgg.consumer.mock.OrderServiceMock&pid=772&qos.accept.foreign.ip=false&qos.enable=false&qos.port=33334&register=true&register.ip=192.168.0.103&release=2.7.1&remote.application=hello-world-app&remote.timestamp=1561937356215&revision=1.0.0-SNAPSHOT&side=consumer&sticky=true&timeout=2000&timestamp=1562490923484) failed to connect to server /192.168.0.101:20880, error message is:Connection refused: no further information: /192.168.0.101:20880
+2019-07-07 17:34:09  [ dubbo-client-idleCheck-thread-1:68427 ] - [ ERROR ]   [DUBBO] Fail to connect to HeaderExchangeClient [channel=org.apache.dubbo.remoting.transport.netty4.NettyClient [192.168.0.103:0 -> /192.168.0.101:20880]], dubbo version: 2.7.1, current host: 192.168.0.103
+org.apache.dubbo.remoting.RemotingException: client(url: dubbo://192.168.0.101:20880/com.wywhdgg.api.serivce.OrderService?actives=10&anyhost=true&application=wywhdgg-consumer&bean.name=com.wywhdgg.api.serivce.OrderService&check=false&codec=dubbo&createOrder.timeout=5000&default.deprecated=false&default.dynamic=false&default.lazy=false&default.register=true&default.sticky=false&deprecated=false&dubbo=2.0.2&dynamic=false&generic=false&heartbeat=60000&interface=com.wywhdgg.api.serivce.OrderService&lazy=false&methods=createOrder,getOrder&mock=com.wywhdgg.consumer.mock.OrderServiceMock&pid=20720&qos.accept.foreign.ip=false&qos.enable=false&qos.port=33334&register=true&register.ip=192.168.0.103&release=2.7.1&remote.application=hello-world-app&remote.timestamp=1561937391464&revision=1.0.0-SNAPSHOT&side=consumer&sticky=true&timeout=5000&timestamp=1562491982797) failed to connect to server /192.168.0.101:20880, error message is:Connection refused: no further information: /192.168.0.101:20880
 	at org.apache.dubbo.remoting.transport.netty4.NettyClient.doConnect(NettyClient.java:131)
 	at org.apache.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:186)
 	at org.apache.dubbo.remoting.transport.AbstractClient.reconnect(AbstractClient.java:242)
@@ -24,34 +24,8 @@ Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connectio
 	... 1 more
 Caused by: java.net.ConnectException: Connection refused: no further information
 	... 11 more
-2019-07-07 17:16:30  [ dubbo-client-idleCheck-thread-1:68172 ] - [ ERROR ]   [DUBBO] Fail to connect to HeaderExchangeClient [channel=org.apache.dubbo.remoting.transport.netty4.NettyClient [192.168.0.103:0 -> /192.168.0.103:20880]], dubbo version: 2.7.1, current host: 192.168.0.103
-org.apache.dubbo.remoting.RemotingException: client(url: dubbo://192.168.0.103:20880/com.wywhdgg.api.serivce.OrderService?actives=10&anyhost=true&application=wywhdgg-consumer&bean.name=com.wywhdgg.api.serivce.OrderService&check=false&codec=dubbo&createOrder.timeout=6000&default.deprecated=false&default.dynamic=false&default.lazy=false&default.register=true&default.sticky=false&deprecated=false&dubbo=2.0.2&dynamic=false&generic=false&heartbeat=60000&interface=com.wywhdgg.api.serivce.OrderService&lazy=false&methods=createOrder,getOrder&mock=com.wywhdgg.consumer.mock.OrderServiceMock&pid=772&qos.accept.foreign.ip=false&qos.enable=false&qos.port=33334&register=true&register.ip=192.168.0.103&release=2.7.1&remote.application=wywhdgg-provider&remote.timestamp=1562487664935&side=consumer&sticky=true&timeout=2000&timestamp=1562490923484) failed to connect to server /192.168.0.103:20880, error message is:Connection refused: no further information: /192.168.0.103:20880
-	at org.apache.dubbo.remoting.transport.netty4.NettyClient.doConnect(NettyClient.java:131)
-	at org.apache.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:186)
-	at org.apache.dubbo.remoting.transport.AbstractClient.reconnect(AbstractClient.java:242)
-	at org.apache.dubbo.remoting.exchange.support.header.HeaderExchangeClient.reconnect(HeaderExchangeClient.java:152)
-	at org.apache.dubbo.remoting.exchange.support.header.ReconnectTimerTask.doTask(ReconnectTimerTask.java:49)
-	at org.apache.dubbo.remoting.exchange.support.header.AbstractTimerTask.run(AbstractTimerTask.java:87)
-	at org.apache.dubbo.common.timer.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:648)
-	at org.apache.dubbo.common.timer.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:727)
-	at org.apache.dubbo.common.timer.HashedWheelTimer$Worker.run(HashedWheelTimer.java:449)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /192.168.0.103:20880
-	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
-	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
-	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
-	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:644)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:591)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:508)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:470)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:909)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	... 1 more
-Caused by: java.net.ConnectException: Connection refused: no further information
-	... 11 more
-2019-07-07 17:17:31  [ dubbo-client-idleCheck-thread-1:129131 ] - [ ERROR ]   [DUBBO] Fail to connect to HeaderExchangeClient [channel=org.apache.dubbo.remoting.transport.netty4.NettyClient [192.168.0.103:0 -> /192.168.0.101:20880]], dubbo version: 2.7.1, current host: 192.168.0.103
-org.apache.dubbo.remoting.RemotingException: client(url: dubbo://192.168.0.101:20880/com.wywhdgg.api.serivce.OrderService?actives=10&anyhost=true&application=wywhdgg-consumer&bean.name=com.wywhdgg.api.serivce.OrderService&check=false&codec=dubbo&createOrder.timeout=6000&default.deprecated=false&default.dynamic=false&default.lazy=false&default.register=true&default.sticky=false&deprecated=false&dubbo=2.0.2&dynamic=false&generic=false&heartbeat=60000&interface=com.wywhdgg.api.serivce.OrderService&lazy=false&methods=createOrder,getOrder&mock=com.wywhdgg.consumer.mock.OrderServiceMock&pid=772&qos.accept.foreign.ip=false&qos.enable=false&qos.port=33334&register=true&register.ip=192.168.0.103&release=2.7.1&remote.application=hello-world-app&remote.timestamp=1561937356215&revision=1.0.0-SNAPSHOT&side=consumer&sticky=true&timeout=2000&timestamp=1562490923484) failed to connect to server /192.168.0.101:20880, error message is:Connection refused: no further information: /192.168.0.101:20880
+2019-07-07 17:35:11  [ dubbo-client-idleCheck-thread-1:130131 ] - [ ERROR ]   [DUBBO] Fail to connect to HeaderExchangeClient [channel=org.apache.dubbo.remoting.transport.netty4.NettyClient [192.168.0.103:0 -> /192.168.0.101:20880]], dubbo version: 2.7.1, current host: 192.168.0.103
+org.apache.dubbo.remoting.RemotingException: client(url: dubbo://192.168.0.101:20880/com.wywhdgg.api.serivce.OrderService?actives=10&anyhost=true&application=wywhdgg-consumer&bean.name=com.wywhdgg.api.serivce.OrderService&check=false&codec=dubbo&createOrder.timeout=5000&default.deprecated=false&default.dynamic=false&default.lazy=false&default.register=true&default.sticky=false&deprecated=false&dubbo=2.0.2&dynamic=false&generic=false&heartbeat=60000&interface=com.wywhdgg.api.serivce.OrderService&lazy=false&methods=createOrder,getOrder&mock=com.wywhdgg.consumer.mock.OrderServiceMock&pid=20720&qos.accept.foreign.ip=false&qos.enable=false&qos.port=33334&register=true&register.ip=192.168.0.103&release=2.7.1&remote.application=hello-world-app&remote.timestamp=1561937391464&revision=1.0.0-SNAPSHOT&side=consumer&sticky=true&timeout=5000&timestamp=1562491982797) failed to connect to server /192.168.0.101:20880, error message is:Connection refused: no further information: /192.168.0.101:20880
 	at org.apache.dubbo.remoting.transport.netty4.NettyClient.doConnect(NettyClient.java:131)
 	at org.apache.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:186)
 	at org.apache.dubbo.remoting.transport.AbstractClient.reconnect(AbstractClient.java:242)
@@ -76,20 +50,8 @@ Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connectio
 	... 1 more
 Caused by: java.net.ConnectException: Connection refused: no further information
 	... 11 more
-2019-07-07 17:18:34  [ dubbo-client-idleCheck-thread-1:192509 ] - [ ERROR ]   [DUBBO] Fail to connect to HeaderExchangeClient [channel=org.apache.dubbo.remoting.transport.netty4.NettyClient [192.168.0.103:0 -> /192.168.0.101:20880]], dubbo version: 2.7.1, current host: 192.168.0.103
-org.apache.dubbo.remoting.RemotingException: client(url: dubbo://192.168.0.101:20880/com.wywhdgg.api.serivce.OrderService?actives=10&anyhost=true&application=wywhdgg-consumer&bean.name=com.wywhdgg.api.serivce.OrderService&check=false&codec=dubbo&createOrder.timeout=6000&default.deprecated=false&default.dynamic=false&default.lazy=false&default.register=true&default.sticky=false&deprecated=false&dubbo=2.0.2&dynamic=false&generic=false&heartbeat=60000&interface=com.wywhdgg.api.serivce.OrderService&lazy=false&methods=createOrder,getOrder&mock=com.wywhdgg.consumer.mock.OrderServiceMock&pid=772&qos.accept.foreign.ip=false&qos.enable=false&qos.port=33334&register=true&register.ip=192.168.0.103&release=2.7.1&remote.application=hello-world-app&remote.timestamp=1561937356215&revision=1.0.0-SNAPSHOT&side=consumer&sticky=true&timeout=2000&timestamp=1562490923484) failed to connect to server /192.168.0.101:20880 client-side timeout 3000ms (elapsed: 3001ms) from netty client 192.168.0.103 using dubbo version 2.7.1
-	at org.apache.dubbo.remoting.transport.netty4.NettyClient.doConnect(NettyClient.java:136)
-	at org.apache.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:186)
-	at org.apache.dubbo.remoting.transport.AbstractClient.reconnect(AbstractClient.java:242)
-	at org.apache.dubbo.remoting.exchange.support.header.HeaderExchangeClient.reconnect(HeaderExchangeClient.java:152)
-	at org.apache.dubbo.remoting.exchange.support.header.ReconnectTimerTask.doTask(ReconnectTimerTask.java:49)
-	at org.apache.dubbo.remoting.exchange.support.header.AbstractTimerTask.run(AbstractTimerTask.java:87)
-	at org.apache.dubbo.common.timer.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:648)
-	at org.apache.dubbo.common.timer.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:727)
-	at org.apache.dubbo.common.timer.HashedWheelTimer$Worker.run(HashedWheelTimer.java:449)
-	at java.lang.Thread.run(Thread.java:745)
-2019-07-07 17:19:37  [ dubbo-client-idleCheck-thread-1:255042 ] - [ ERROR ]   [DUBBO] Fail to connect to HeaderExchangeClient [channel=org.apache.dubbo.remoting.transport.netty4.NettyClient [192.168.0.103:0 -> /192.168.0.101:20880]], dubbo version: 2.7.1, current host: 192.168.0.103
-org.apache.dubbo.remoting.RemotingException: client(url: dubbo://192.168.0.101:20880/com.wywhdgg.api.serivce.OrderService?actives=10&anyhost=true&application=wywhdgg-consumer&bean.name=com.wywhdgg.api.serivce.OrderService&check=false&codec=dubbo&createOrder.timeout=6000&default.deprecated=false&default.dynamic=false&default.lazy=false&default.register=true&default.sticky=false&deprecated=false&dubbo=2.0.2&dynamic=false&generic=false&heartbeat=60000&interface=com.wywhdgg.api.serivce.OrderService&lazy=false&methods=createOrder,getOrder&mock=com.wywhdgg.consumer.mock.OrderServiceMock&pid=772&qos.accept.foreign.ip=false&qos.enable=false&qos.port=33334&register=true&register.ip=192.168.0.103&release=2.7.1&remote.application=hello-world-app&remote.timestamp=1561937356215&revision=1.0.0-SNAPSHOT&side=consumer&sticky=true&timeout=2000&timestamp=1562490923484) failed to connect to server /192.168.0.101:20880, error message is:Connection refused: no further information: /192.168.0.101:20880
+2019-07-07 17:38:28  [ dubbo-client-idleCheck-thread-1:67493 ] - [ ERROR ]   [DUBBO] Fail to connect to HeaderExchangeClient [channel=org.apache.dubbo.remoting.transport.netty4.NettyClient [192.168.0.103:0 -> /192.168.0.101:20880]], dubbo version: 2.7.1, current host: 192.168.0.103
+org.apache.dubbo.remoting.RemotingException: client(url: dubbo://192.168.0.101:20880/com.wywhdgg.api.serivce.OrderService?actives=10&anyhost=true&application=wywhdgg-consumer&bean.name=com.wywhdgg.api.serivce.OrderService&check=false&codec=dubbo&createOrder.timeout=5000&default.deprecated=false&default.dynamic=false&default.lazy=false&default.register=true&default.sticky=false&deprecated=false&dubbo=2.0.2&dynamic=false&generic=false&heartbeat=60000&interface=com.wywhdgg.api.serivce.OrderService&lazy=false&methods=createOrder,getOrder&mock=com.wywhdgg.consumer.mock.OrderServiceMock&pid=11028&qos.accept.foreign.ip=false&qos.enable=false&qos.port=33334&register=true&register.ip=192.168.0.103&release=2.7.1&remote.application=hello-world-app&remote.timestamp=1561937391464&revision=1.0.0-SNAPSHOT&side=consumer&sticky=true&timeout=5000&timestamp=1562492242780) failed to connect to server /192.168.0.101:20880, error message is:Connection refused: no further information: /192.168.0.101:20880
 	at org.apache.dubbo.remoting.transport.netty4.NettyClient.doConnect(NettyClient.java:131)
 	at org.apache.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:186)
 	at org.apache.dubbo.remoting.transport.AbstractClient.reconnect(AbstractClient.java:242)
@@ -114,8 +76,8 @@ Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connectio
 	... 1 more
 Caused by: java.net.ConnectException: Connection refused: no further information
 	... 11 more
-2019-07-07 17:20:39  [ dubbo-client-idleCheck-thread-1:317214 ] - [ ERROR ]   [DUBBO] Fail to connect to HeaderExchangeClient [channel=org.apache.dubbo.remoting.transport.netty4.NettyClient [192.168.0.103:0 -> /192.168.0.101:20880]], dubbo version: 2.7.1, current host: 192.168.0.103
-org.apache.dubbo.remoting.RemotingException: client(url: dubbo://192.168.0.101:20880/com.wywhdgg.api.serivce.OrderService?actives=10&anyhost=true&application=wywhdgg-consumer&bean.name=com.wywhdgg.api.serivce.OrderService&check=false&codec=dubbo&createOrder.timeout=6000&default.deprecated=false&default.dynamic=false&default.lazy=false&default.register=true&default.sticky=false&deprecated=false&dubbo=2.0.2&dynamic=false&generic=false&heartbeat=60000&interface=com.wywhdgg.api.serivce.OrderService&lazy=false&methods=createOrder,getOrder&mock=com.wywhdgg.consumer.mock.OrderServiceMock&pid=772&qos.accept.foreign.ip=false&qos.enable=false&qos.port=33334&register=true&register.ip=192.168.0.103&release=2.7.1&remote.application=hello-world-app&remote.timestamp=1561937356215&revision=1.0.0-SNAPSHOT&side=consumer&sticky=true&timeout=2000&timestamp=1562490923484) failed to connect to server /192.168.0.101:20880, error message is:Connection refused: no further information: /192.168.0.101:20880
+2019-07-07 17:39:30  [ dubbo-client-idleCheck-thread-1:129373 ] - [ ERROR ]   [DUBBO] Fail to connect to HeaderExchangeClient [channel=org.apache.dubbo.remoting.transport.netty4.NettyClient [192.168.0.103:0 -> /192.168.0.101:20880]], dubbo version: 2.7.1, current host: 192.168.0.103
+org.apache.dubbo.remoting.RemotingException: client(url: dubbo://192.168.0.101:20880/com.wywhdgg.api.serivce.OrderService?actives=10&anyhost=true&application=wywhdgg-consumer&bean.name=com.wywhdgg.api.serivce.OrderService&check=false&codec=dubbo&createOrder.timeout=5000&default.deprecated=false&default.dynamic=false&default.lazy=false&default.register=true&default.sticky=false&deprecated=false&dubbo=2.0.2&dynamic=false&generic=false&heartbeat=60000&interface=com.wywhdgg.api.serivce.OrderService&lazy=false&methods=createOrder,getOrder&mock=com.wywhdgg.consumer.mock.OrderServiceMock&pid=11028&qos.accept.foreign.ip=false&qos.enable=false&qos.port=33334&register=true&register.ip=192.168.0.103&release=2.7.1&remote.application=hello-world-app&remote.timestamp=1561937391464&revision=1.0.0-SNAPSHOT&side=consumer&sticky=true&timeout=5000&timestamp=1562492242780) failed to connect to server /192.168.0.101:20880, error message is:Connection refused: no further information: /192.168.0.101:20880
 	at org.apache.dubbo.remoting.transport.netty4.NettyClient.doConnect(NettyClient.java:131)
 	at org.apache.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:186)
 	at org.apache.dubbo.remoting.transport.AbstractClient.reconnect(AbstractClient.java:242)
@@ -140,8 +102,8 @@ Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connectio
 	... 1 more
 Caused by: java.net.ConnectException: Connection refused: no further information
 	... 11 more
-2019-07-07 17:20:40  [ dubbo-client-idleCheck-thread-1:318219 ] - [ ERROR ]   [DUBBO] Fail to connect to HeaderExchangeClient [channel=org.apache.dubbo.remoting.transport.netty4.NettyClient [192.168.0.103:0 -> /192.168.0.103:20880]], dubbo version: 2.7.1, current host: 192.168.0.103
-org.apache.dubbo.remoting.RemotingException: client(url: dubbo://192.168.0.103:20880/com.wywhdgg.api.serivce.OrderService?actives=10&anyhost=true&application=wywhdgg-consumer&bean.name=com.wywhdgg.api.serivce.OrderService&check=false&codec=dubbo&createOrder.timeout=6000&default.deprecated=false&default.dynamic=false&default.lazy=false&default.register=true&default.sticky=false&deprecated=false&dubbo=2.0.2&dynamic=false&generic=false&heartbeat=60000&interface=com.wywhdgg.api.serivce.OrderService&lazy=false&methods=createOrder,getOrder&mock=com.wywhdgg.consumer.mock.OrderServiceMock&pid=772&qos.accept.foreign.ip=false&qos.enable=false&qos.port=33334&register=true&register.ip=192.168.0.103&release=2.7.1&remote.application=wywhdgg-provider&remote.timestamp=1562487664935&side=consumer&sticky=true&timeout=2000&timestamp=1562490923484) failed to connect to server /192.168.0.103:20880, error message is:Connection refused: no further information: /192.168.0.103:20880
+2019-07-07 17:46:40  [ dubbo-client-idleCheck-thread-1:66167 ] - [ ERROR ]   [DUBBO] Fail to connect to HeaderExchangeClient [channel=org.apache.dubbo.remoting.transport.netty4.NettyClient [192.168.0.103:0 -> /192.168.0.101:20880]], dubbo version: 2.7.1, current host: 192.168.0.103
+org.apache.dubbo.remoting.RemotingException: client(url: dubbo://192.168.0.101:20880/com.wywhdgg.api.serivce.OrderService?actives=10&anyhost=true&application=wywhdgg-consumer&bean.name=com.wywhdgg.api.serivce.OrderService&check=false&codec=dubbo&createOrder.timeout=5000&default.deprecated=false&default.dynamic=false&default.lazy=false&default.register=true&default.sticky=false&deprecated=false&dubbo=2.0.2&dynamic=false&generic=false&heartbeat=60000&interface=com.wywhdgg.api.serivce.OrderService&lazy=false&methods=createOrder,getOrder&mock=com.wywhdgg.consumer.mock.OrderServiceMock&pid=20760&qos.accept.foreign.ip=false&qos.enable=false&qos.port=33334&register=true&register.ip=192.168.0.103&release=2.7.1&remote.application=hello-world-app&remote.timestamp=1561937391464&revision=1.0.0-SNAPSHOT&side=consumer&sticky=true&timeout=5000&timestamp=1562492736000) failed to connect to server /192.168.0.101:20880, error message is:Connection refused: no further information: /192.168.0.101:20880
 	at org.apache.dubbo.remoting.transport.netty4.NettyClient.doConnect(NettyClient.java:131)
 	at org.apache.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:186)
 	at org.apache.dubbo.remoting.transport.AbstractClient.reconnect(AbstractClient.java:242)
@@ -152,7 +114,7 @@ org.apache.dubbo.remoting.RemotingException: client(url: dubbo://192.168.0.103:2
 	at org.apache.dubbo.common.timer.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:727)
 	at org.apache.dubbo.common.timer.HashedWheelTimer$Worker.run(HashedWheelTimer.java:449)
 	at java.lang.Thread.run(Thread.java:745)
-Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /192.168.0.103:20880
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /192.168.0.101:20880
 	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
 	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
 	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
@@ -166,3 +128,43 @@ Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connectio
 	... 1 more
 Caused by: java.net.ConnectException: Connection refused: no further information
 	... 11 more
+2019-07-07 18:17:20  [ main:2368 ] - [ ERROR ]   [DUBBO] qos-server can not bind localhost:22222, dubbo version: 2.7.2, current host: 192.168.0.103
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:437)
+	at sun.nio.ch.Net.bind(Net.java:429)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at io.netty.channel.socket.nio.NioServerSocketChannel.doBind(NioServerSocketChannel.java:130)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.bind(AbstractChannel.java:562)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.bind(DefaultChannelPipeline.java:1358)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:501)
+	at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:486)
+	at io.netty.channel.DefaultChannelPipeline.bind(DefaultChannelPipeline.java:1019)
+	at io.netty.channel.AbstractChannel.bind(AbstractChannel.java:258)
+	at io.netty.bootstrap.AbstractBootstrap$2.run(AbstractBootstrap.java:366)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:474)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:909)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:745)
+2019-07-07 18:32:50  [ main:1959 ] - [ ERROR ]   [DUBBO] qos-server can not bind localhost:22222, dubbo version: 2.7.2, current host: 192.168.0.103
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:437)
+	at sun.nio.ch.Net.bind(Net.java:429)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at io.netty.channel.socket.nio.NioServerSocketChannel.doBind(NioServerSocketChannel.java:130)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.bind(AbstractChannel.java:562)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.bind(DefaultChannelPipeline.java:1358)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:501)
+	at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:486)
+	at io.netty.channel.DefaultChannelPipeline.bind(DefaultChannelPipeline.java:1019)
+	at io.netty.channel.AbstractChannel.bind(AbstractChannel.java:258)
+	at io.netty.bootstrap.AbstractBootstrap$2.run(AbstractBootstrap.java:366)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:474)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:909)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:745)

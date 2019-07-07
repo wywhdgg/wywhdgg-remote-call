@@ -1,11 +1,14 @@
-import com.alibaba.dubbo.rpc.RpcContext;
 import com.wywhdgg.api.serivce.AsyncService;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
+
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.alibaba.dubbo.rpc.RpcContext;
+
 
 /**
  * AsyncServiceTest

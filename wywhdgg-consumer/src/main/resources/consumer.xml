@@ -23,8 +23,8 @@
 
     <!-- 生成远程服务代理，可以和本地bean一样使用orderService -->
     <!-- true、false、String、表达式 -->
-    <dubbo:reference id="orderService" timeout="6000" sticky="true" mock="com.wywhdgg.consumer.mock.OrderServiceMock"
+    <dubbo:reference id="orderService" timeout="5000" sticky="true" mock="com.wywhdgg.consumer.mock.OrderServiceMock"
         interface="com.wywhdgg.api.serivce.OrderService">
-    	<!--<dubbo:method name="createOrder" timeout="5000"></dubbo:method>-->
+    	<dubbo:method name="createOrder" timeout="5000"></dubbo:method>
     </dubbo:reference>
 </beans>

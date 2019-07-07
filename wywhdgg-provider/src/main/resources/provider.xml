@@ -22,7 +22,8 @@
     <!--<dubbo:protocol name="dubbo" port="20880" />-->
  
     <!-- 声明需要暴露的服务接口 -->
-    <dubbo:service interface="com.wywhdgg.api.serivce.OrderService" timeout="5000" ref="orderService" actives="10" />
+    <dubbo:service interface="com.wywhdgg.api.serivce.OrderService" timeout="5000"
+        ref="orderService" actives="10" />
     <dubbo:service interface="com.wywhdgg.api.serivce.AsyncService" ref="asyncService">
     </dubbo:service>
     

@@ -20,7 +20,7 @@ public class OrderServiceMock implements OrderService {
         // 执行业务代码
         // 。。。。。
         try {
-            Thread.sleep(200L);
+            Thread.sleep(100L);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

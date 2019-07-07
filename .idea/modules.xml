@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/wywhdgg-api/wywhdgg-api.iml" filepath="$PROJECT_DIR$/wywhdgg-api/wywhdgg-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wywhdgg-client/wywhdgg-client.iml" filepath="$PROJECT_DIR$/wywhdgg-client/wywhdgg-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wywhdgg-common/wywhdgg-common.iml" filepath="$PROJECT_DIR$/wywhdgg-common/wywhdgg-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wywhdgg-consumer/wywhdgg-consumer.iml" filepath="$PROJECT_DIR$/wywhdgg-consumer/wywhdgg-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wywhdgg-provider/wywhdgg-provider.iml" filepath="$PROJECT_DIR$/wywhdgg-provider/wywhdgg-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/wywhdgg-remote-call.iml" filepath="$PROJECT_DIR$/.idea/wywhdgg-remote-call.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wywhdgg-service/wywhdgg-service.iml" filepath="$PROJECT_DIR$/wywhdgg-service/wywhdgg-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wywhdgg-web/wywhdgg-web.iml" filepath="$PROJECT_DIR$/wywhdgg-web/wywhdgg-web.iml" />
+    </modules>
+  </component>
+</project>

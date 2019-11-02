@@ -63,13 +63,13 @@
     <dependency>
       <groupId>io.netty</groupId>
       <artifactId>netty-all</artifactId>
-      <version>4.1.32.Final</version>
+      <version>4.1.42.Final</version>
     </dependency>
 
     <dependency>
       <groupId>io.netty</groupId>
       <artifactId>netty-all</artifactId>
-      <version>4.1.32.Final</version>
+      <version>4.1.42.Final</version>
     </dependency>
 
     <!-- 默认使用的是第三方zookeeper客户端 curator -->

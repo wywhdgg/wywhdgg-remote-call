@@ -27,7 +27,7 @@
 
     <lombok.version>1.16.2</lombok.version>
   <!--  <sping.version>4.3.16.RELEASE</sping.version>-->
-    <dubbo.version>2.7.2</dubbo.version>
+    <dubbo.version>2.7.15</dubbo.version>
     <hystrix-core>1.5.9</hystrix-core>
     <junit_jupiter_version>5.4.0</junit_jupiter_version>
     <hamcrest_version>1.3</hamcrest_version>

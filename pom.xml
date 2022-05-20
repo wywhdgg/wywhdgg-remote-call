@@ -22,7 +22,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <jdk.version>1.8</jdk.version>
     <dubbo.old.version>2.6.6</dubbo.old.version>
-    <gson.version>2.8.5</gson.version>
+    <gson.version>2.8.9</gson.version>
     <jackson.version>2.9.8</jackson.version>
 
     <lombok.version>1.16.2</lombok.version>
